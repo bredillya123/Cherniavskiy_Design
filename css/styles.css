@@ -609,6 +609,10 @@ body._lock {
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .about__title {
   color: #ffffff;
@@ -616,6 +620,10 @@ body._lock {
   line-height: 1.55;
   font-weight: 500;
   letter-spacing: 1.5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .about__description {
   width: 100%;
@@ -639,6 +647,10 @@ body._lock {
   max-width: 90px;
   max-height: 90px;
   opacity: 50%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 @media screen and (min-width: 210px) and (max-width: 1023.99px) {

@@ -574,4 +574,113 @@ body._lock {
   .main__block {
     margin-top: 40%;
   }
+}
+@media screen and (max-height: 650px) {
+  .main__block {
+    margin-top: 10%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1125.99px) {
+  .navigation__main {
+    margin-left: 10%;
+  }
+}
+.about {
+  width: 100%;
+}
+.about__container {
+  width: 100%;
+}
+.about__block-info {
+  width: 100%;
+  position: relative;
+  background: rgb(41, 41, 41);
+  padding: 5% 10% 5% calc(90px + 15%);
+  display: flex;
+  justify-content: space-between;
+}
+.about__block-title-sub {
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-size: 70px;
+  text-shadow: -3px -1px 4px #000000;
+  color: rgb(41, 41, 41);
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 10px;
+}
+.about__title {
+  color: #ffffff;
+  font-size: 52px;
+  line-height: 1.55;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+.about__description {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.about__text {
+  max-width: 520px;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.55;
+  font-weight: 300;
+}
+.about__text:first-child {
+  margin-right: 7%;
+}
+.about__img {
+  position: absolute;
+  top: 13%;
+  left: 16.7%;
+  max-width: 90px;
+  max-height: 90px;
+  opacity: 50%;
+}
+
+@media screen and (min-width: 210px) and (max-width: 1023.99px) {
+  .about__block-info {
+    padding: 10%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .about__block-title {
+    display: none;
+  }
+  .about__title {
+    font-size: 34px;
+    line-height: 53px;
+    margin-bottom: 5%;
+  }
+  .about__text {
+    line-height: 25px;
+    font-size: 16px;
+  }
+  .about__description {
+    flex-direction: column;
+  }
+  .about__text:first-child {
+    margin-right: 0;
+    margin-bottom: 5%;
+  }
+  .about__img {
+    max-width: 57px;
+    max-height: 57px;
+    top: 5%;
+    left: 1%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023.99px) {
+  .about__block-title {
+    display: block;
+  }
+  .about__img {
+    max-width: 90px;
+    max-height: 90px;
+    top: 10%;
+    left: 1%;
+  }
 }/*# sourceMappingURL=styles.css.map */

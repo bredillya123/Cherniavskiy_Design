@@ -1,0 +1,136 @@
+.about {
+    width: 100%;
+
+    &__container {
+        width: 100%;
+    }
+
+    &__block{
+        &-info {
+            width: 100%;
+            position: relative;
+            background: rgb(41,41,41);
+            padding: 5% 10% 5% calc(90px + 15%);
+            display: flex;
+            justify-content: space-between;
+        }
+    
+
+        &-title {
+            &-sub {
+                writing-mode: vertical-lr;
+                transform: rotate(180deg);
+                font-size: 70px;
+                text-shadow: -3px -1px 4px #000000;
+                color: rgb(41,41,41);
+                text-transform: uppercase;
+                font-weight: 500;
+                letter-spacing: 10px;
+            }
+        }
+    }
+
+    &__title {
+        color: #ffffff;
+        font-size: 52px;
+        line-height: 1.55;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+    }
+
+    &__description {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text {
+        max-width: 520px;
+        color: #ffffff;
+        font-size: 18px;
+        line-height: 1.55;
+        font-weight: 300;
+    }
+
+    &__text:first-child {
+        margin-right: 7%;
+    }
+
+    &__img {
+        position: absolute;
+        top: 13%;
+        left: 16.7%;
+        max-width: 90px;
+        max-height: 90px;
+        opacity: 50%;
+    }
+    
+    
+}
+
+// mobile 
+@media screen and (min-width: 210px) and (max-width: 1023.99px) {
+    
+    .about  {
+        &__block {
+            &-info {
+                padding: 10%;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            &-title {
+                display: none;
+            }
+        }
+
+        &__title {
+            font-size: 34px;
+            line-height: 53px;
+            margin-bottom: 5%;
+        }
+
+        &__text {
+            line-height: 25px;
+            font-size: 16px;
+        }
+
+        &__description {
+            flex-direction: column;
+        }
+
+        &__text:first-child {
+            margin-right: 0;
+            margin-bottom: 5%;
+        }
+
+        &__img {
+            max-width: 57px;
+            max-height: 57px;            
+            top: 5%;
+            left: 1%;
+        }
+    }
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023.99px) {
+    
+    .about  {
+        &__block {
+            &-title {
+                display: block;
+            }
+        }
+
+        &__img {
+            max-width: 90px;
+            max-height: 90px; 
+            top: 10%;
+            left: 1%;
+        }
+    }
+
+
+}

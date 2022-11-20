@@ -12,7 +12,7 @@ const swiper = new Swiper('.swiper', {
 
   // infinit active
   loop: true,
-  loopedSlides: 4,
+  loopedSlides: 5,
 
   // autoplay mode
   autoplay: {

@@ -260,7 +260,7 @@ body._lock {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .logo__navigation {
-  max-width: 80px;
+  max-width: 125px;
 }
 
 .nav-mobile {
@@ -382,7 +382,7 @@ body._lock {
     display: block;
   }
   .logo__navigation {
-    max-width: 75px;
+    max-width: 100px;
   }
   .logo__navigation--adaptive {
     width: 150px;

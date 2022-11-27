@@ -1,9 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background: #19191B;
-    perspective: 1000px;
-    overflow-x: hidden;
-    
+    background: #19191B;  
 }
 
 .preloader {
@@ -21,12 +18,6 @@ body {
     flex-direction: column;
     animation: swipePage 1s linear forwards;
     animation-delay: 1.7s;
-
-    // &__wrapper {
-        // transform-style: preserve-3d;
-        // perspective: 1000px;
-        // perspective-origin: 50% 50%;
-    // }
     
 
     &__logo {
@@ -92,7 +83,7 @@ body {
         transform: translateX(-30%) scale(1) rotateY(20deg);
     }
     100% {
-        transform: translateX(-130%) scale(.8) rotateY(20deg);
+        transform: translateX(-130%) scale(1) rotateY(20deg);
     }
 }
 
@@ -508,6 +499,14 @@ a {
 
 // mobile 
 @media screen and (min-width: 210px) and (max-width: 1023.99px) {
+    #pointer-dot {
+        border: none;
+    }
+    
+    #pointer-ring {
+        border: none;
+    }
+
     body._lock {
         overflow: hidden;
     }

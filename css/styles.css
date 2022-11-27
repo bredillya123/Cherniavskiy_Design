@@ -89,8 +89,6 @@ body, html {
 body {
   font-family: "Montserrat", sans-serif;
   background: #19191B;
-  perspective: 1000px;
-  overflow-x: hidden;
 }
 
 .preloader {
@@ -191,7 +189,7 @@ body {
     transform: translateX(-30%) scale(1) rotateY(20deg);
   }
   100% {
-    transform: translateX(-130%) scale(0.8) rotateY(20deg);
+    transform: translateX(-130%) scale(1) rotateY(20deg);
   }
 }
 @keyframes swipePage {
@@ -202,7 +200,7 @@ body {
     transform: translateX(-30%) scale(1) rotateY(20deg);
   }
   100% {
-    transform: translateX(-130%) scale(0.8) rotateY(20deg);
+    transform: translateX(-130%) scale(1) rotateY(20deg);
   }
 }
 #pointer-dot {
@@ -560,6 +558,12 @@ a {
   }
 }
 @media screen and (min-width: 210px) and (max-width: 1023.99px) {
+  #pointer-dot {
+    border: none;
+  }
+  #pointer-ring {
+    border: none;
+  }
   body._lock {
     overflow: hidden;
   }

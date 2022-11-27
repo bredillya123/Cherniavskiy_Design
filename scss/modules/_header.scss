@@ -76,14 +76,11 @@ body {
 }
 
 @keyframes swipePage {
-    0% {
-        transform: translateX(0) scale(1) rotateY(0deg);
+    from {
+        left: 0%;
     }
-    50% {
-        transform: translateX(-30%) scale(1) rotateY(20deg);
-    }
-    100% {
-        transform: translateX(-130%) scale(1) rotateY(20deg);
+    to {
+        left: -110%;
     }
 }
 

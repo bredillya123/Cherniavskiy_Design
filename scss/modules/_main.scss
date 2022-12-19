@@ -11,10 +11,13 @@
         left: 0;
         z-index: 3;
         width: 100%;
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;        
     }
 
     &__block {
-        margin-top: 15%;
         width: 100%;
         min-height: 100%;
         display: flex;
@@ -26,9 +29,24 @@
         color: #fff;
     }
 
+    &__info {
+        transform: scale(1);
+        transition: 1s ease;
+
+        &-link {
+            text-decoration: none;
+        }
+
+        &:hover {
+            transform: scale(1.02);
+            text-shadow: 2px 1px 12px rgba(0,0,0,0.7);
+        }
+    }
+
     &__title {
         color: #ffffff;
         line-height: 1.55;
+        user-select: none;
 
         &--small {
             font-size: 18px;
@@ -37,9 +55,10 @@
         }
 
         &--big {
-            font-size: 76px;
-            font-weight: 500;
-            letter-spacing: 1.5px;
+            font-size: 55px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            line-height: 115%;
         }
 
         &--medium {
@@ -49,9 +68,60 @@
         }
     }
 
-    &__buttons {
+    &__counter {
+        width: 100%;
+        margin-top: 4.5%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        user-select: none;
+
+        &-line {
+            height: 1px;
+            background: #fff;
+
+            &--sm {
+                width: 30px;
+            }
+
+            &--lg {
+                width: 400px;
+                margin-right: 1.5%;
+            }
+        }
+
+        &-title {
+            width: 160px;
+            text-align: center;
+        }
+
+        &-text {
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: 400;
+            color: #fff;
+            font-size: 14px;    
+        }
+
+        &-num span {
+            font-size: 14px;
+        }
+    }
+
+    &__buttons {        
+        position: absolute;
+        top: 85%;
+        left: calc(50% - 130px);
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__butnav {
         margin-top: 4.5%;
         display: flex;
+        justify-content: center;
     }
 }
 
@@ -63,7 +133,7 @@
     max-width: 260px;
     min-width: 260px;
     max-height: 50px;
-    min-height: 50px;
+    min-height: 40px;
     border: 1px solid #fff;
     text-align: center;
     font-size: 16px;
@@ -79,7 +149,7 @@
     }
 
     &--white {
-        color: #19191B;
+        color: #212121;
         background: #fff;
         margin-right: 4.5%;
 
@@ -89,7 +159,7 @@
             max-width: 260px;
             width: 0;
             height: 100%;
-            background: #19191B;
+            background: #212121;
             top: 0%;
             left: 0%;
             display: block;
@@ -100,34 +170,7 @@
 
         &:hover {
             color: #ffffff;
-
-            &::before {
-                width: 100%;
-            }
-        }
-    }
-
-    &--transperent {
-        color: #cecece;
-
-        &::before {
-            content: '';
-            position: absolute;
-            max-width: 260px;
-            width: 0;
-            height: 100%;
-            background: #cecece;
-            top: 0%;
-            left: 0%;
-            display: block;
-            z-index: 9;
-            transition: all .2s ease-in;
-        }
-
-
-        &:hover {
-            color: #19191B;
-            border-color: #cecece;
+            transform: scale(1.02);
 
             &::before {
                 width: 100%;
@@ -151,6 +194,7 @@
 // slider styles
 
 .swiper {
+    position: relative;
     max-height: 100vh;
 
     &-pagination {
@@ -174,6 +218,43 @@
 
 }
 
+.arrow {
+    position: absolute;
+    top: 90%;    
+    color: rgba(255, 255, 255, 0.5);
+    transition: 0.8s all ease;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    &:hover {
+        transform: scale(1.4);
+        color: #fff;
+    }    
+
+    &-left {
+        left: 2%;
+
+        &::after {
+            content: 'prev';
+            display: block;
+            font-size: 18px;
+        }        
+    }
+
+    &-right {
+        left: 5%;
+
+        &::after {
+            content: 'next';
+            display: block;
+            font-size: 18px;
+            
+        }
+    }
+
+    
+}
+
 .slide-box {
     width: 100%;
     min-height: 100vh;
@@ -181,6 +262,107 @@
 }
 
 // mobile 
+@media screen and (min-width: 279.99px) and (max-width: 400px) {
+    .main {
+        &__counter {
+            &-line--sm {
+                width: 11.5%;
+            }
+            &-title {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &-text {
+                font-size: 11px;
+            }
+        }
+    }   
+    
+
+}
+@media screen and (min-width: 400px) and (max-width: 424.99px) {
+    .main {
+        &__counter {
+            &-title {
+                width: 100%;
+            }
+            &-line--sm {
+                width: 11.5%;
+            }
+        }
+    }    
+}
+@media screen and (min-width: 279.99px) and (max-width: 767.99px) {
+    .main {
+        &__counter {
+            &-num {
+                margin-left: 3%;
+            }
+            &-line--sm {
+                width: 11.5%;
+            }
+        }
+    }    
+
+    .change-bg-1 {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0,0,0,0.5522584033613445) 0%), url(../images/main/slider/mobile/first.jpg) no-repeat center center!important;
+        background-size: cover;
+    }
+    
+    .change-bg-2 {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0,0,0,0.5522584033613445) 0%), url(../images/main/slider/mobile/first.jpg) no-repeat center center!important;
+        background-size: cover;
+    }
+    
+    .change-bg-3 {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0,0,0,0.5522584033613445) 0%), url(../images/main/slider/mobile/first.jpg) no-repeat center center!important;
+        background-size: cover;
+    }
+    
+    .change-bg-4 {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0,0,0,0.5522584033613445) 0%), url(../images/main/slider/mobile/first.jpg) no-repeat center center!important;
+        background-size: cover;
+    }
+}
+@media screen and (min-width: 425px) and (max-width: 767.99px) {
+    .main {
+        &__counter {
+            &-title {
+                width: 100%;
+            }
+        }
+    }    
+}
+@media screen and (min-width: 279.99px) and (max-width: 330px) {
+    .main {
+        &__counter {
+            &-title {
+                width: 140%;
+            }
+        }
+    }    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023.99px) {
+    .main {
+        &__counter {
+            &-title {
+                width: 30%;
+            }
+        }
+    }    
+}
+
 @media screen and (min-width: 210px) and (max-width: 1023.99px) {
     
     .main {
@@ -189,15 +371,11 @@
             padding: 0 10px;
         }
 
-        &__block {
-            margin-top: 50%;
-        }
-
         &__info {
+            min-width: 50%;
+            max-width: 89%;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            text-align: center;
         }
 
         &__title {
@@ -220,6 +398,10 @@
         }
     }
 
+    .arrow {
+        display: none;
+    }
+
     .btn {
         &--white {
             margin-bottom: 10%;
@@ -230,9 +412,6 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023.99px) {
     .main {
-        &__block {
-            margin-top: 40%;
-        }
 
         &__title {
             &--small {
@@ -249,23 +428,5 @@
             }
         }
     }    
-}
-
-@media screen and (max-height: 720px){
-    .main__block {
-        margin-top: 35%;
-    }
-}
-
-@media screen and (max-height: 650px){
-    .main__block {
-        margin-top: 10%;
-    }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1125.99px){
-    .navigation__main {
-        margin-left: 10%;
-    }
 }
 

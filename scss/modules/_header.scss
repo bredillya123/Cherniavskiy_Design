@@ -1,6 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background: #19191B;  
+    background: #212121;  
 }
 
 .preloader {
@@ -9,7 +9,7 @@ body {
     min-height: 100vh;
     position: fixed;
     z-index: 1000;
-    background: #19191B;
+    background: #212121;
     overflow: hidden;
     cursor: default!important;
     display: flex;
@@ -120,6 +120,24 @@ a {
 
 .wrapper {
     width: 100%;
+    position: relative;
+    transition: 1s all ease-in;
+
+    &__active {
+        position: fixed;
+        &::before {
+            content: '';
+            display: block;
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            z-index: 20;
+            min-width: 100%;
+            min-height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(15px);
+        }
+    }
 }
 
 .header {
@@ -129,13 +147,19 @@ a {
     background: none;
     transition: .3s all linear;
 
+    &__message-block {
+        position: fixed;
+        top: 80%;
+        right: 10%;
+    }
+
     &::before {
         content: '';
         position: absolute;
         display: block;
         width: 100%;
         height: 70px;
-        background: #19191B;
+        background: #212121;
         top: -80px;
         left: 0%;
         transition: .3s all linear;
@@ -166,6 +190,11 @@ a {
 
 .logo {
     &__block {
+        transition: 1s ease;
+
+        &:hover {
+            transform: scale(1.02);
+        }
 
         &--adaptive {
             margin-bottom: 25%;
@@ -213,10 +242,12 @@ a {
         max-width: 330px;
         padding: 60px 40px 25px;
         height: 100vh;
-        background: #19191B;
+        background: rgba(0, 0, 0, 0.60);
         z-index: 4;
         transition: 1s right ease;
         overflow: auto;
+
+        
         
         &--active {
             right: 0%;
@@ -283,28 +314,28 @@ a {
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         margin-bottom: 15px;
 
-        &::after {
-            content: '';
-            position: absolute;
-            display: block;
-            width: 0%;
-            height: 1px;
-            background: #ffffff;
-            right: 100%;
-            top: 120%;
-            opacity: 0%;
-            transition: 1s;    
-            transition-delay: 200ms;          
-        }  
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     display: block;
+        //     width: 0%;
+        //     height: 1px;
+        //     background: #ffffff;
+        //     right: 100%;
+        //     top: 120%;
+        //     opacity: 0%;
+        //     transition: 1s;    
+        //     transition-delay: 200ms;          
+        // }  
 
         &:hover {
-            color: #b3b3b3;
+            color: rgba(255, 255, 255, 0.4);
 
-            &::after {
-                width: 100%;
-                opacity: 100%;
-                right: 0%;
-            }            
+            // &::after {
+            //     width: 100%;
+            //     opacity: 100%;
+            //     right: 0%;
+            // }            
         }
     }
 
@@ -391,6 +422,11 @@ a {
     height: 40px;
     cursor: pointer;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transition: 1s ease;
+
+    &:hover {
+        transform: scale(1.2);
+    }
 
     &::before, &::after {
         content: '';
@@ -522,6 +558,8 @@ a {
         &__main {
             max-width: 280px;
             padding: 60px 25px 25px;
+            background: rgba(0, 0, 0, 0.90);
+            
             
             &--active {
                 right: 0%;
@@ -551,7 +589,7 @@ a {
             }
 
             &-socials {
-                max-width: 80%;
+                max-width: 100%;
                 display: flex;
                 justify-content: space-between;
 

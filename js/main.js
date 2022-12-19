@@ -9,6 +9,11 @@ const swiper = new Swiper('.swiper', {
     el: '.swiper-pagination',
     clickable: true,
   },
+  // arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
   // swipes
   simulateTouch: 0,
 
@@ -18,7 +23,7 @@ const swiper = new Swiper('.swiper', {
 
   // autoplay mode
   autoplay: {
-    delay: 5000,
+    delay: 500000,
     disableOnInteraction: false,
   },
   
@@ -32,12 +37,14 @@ const swiper = new Swiper('.swiper', {
 // burger menu
 const iconMenu = document.querySelector(".menu-icon");
 const menuBody = document.querySelector(".navigation__main");
+const wrapperBlur = document.querySelector(".wrapper");
 
 if (iconMenu){  
   iconMenu.addEventListener("click", function(e) {
     document.body.classList.toggle("_lock")
     iconMenu.classList.toggle("menu-icon--active");
     menuBody.classList.toggle("navigation__main--active");
+    wrapperBlur.classList.toggle("wrapper__active");
   });
 }
 
@@ -60,6 +67,7 @@ if (menuLinks.length > 0) {
         document.body.classList.toggle("_lock")
         iconMenu.classList.toggle("menu-icon--active");
         menuBody.classList.toggle("navigation__main--active");
+        wrapperBlur.classList.toggle("wrapper__active");
       }
 
       window.scrollTo({

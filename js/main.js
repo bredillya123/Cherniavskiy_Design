@@ -1,7 +1,5 @@
 "use scrict"
 
-
-
 // slider settings
 const swiper = new Swiper('.swiper', {
   // dots
@@ -23,7 +21,7 @@ const swiper = new Swiper('.swiper', {
 
   // autoplay mode
   autoplay: {
-    delay: 500000,
+    delay: 5000,
     disableOnInteraction: false,
   },
   

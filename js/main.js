@@ -29,7 +29,7 @@ const swiper = new Swiper('.swiper', {
   speed: 1000,
 
   // slide effect
-  effect: 'coverflow',
+  effect: 'fade',
 })
 
 // burger menu

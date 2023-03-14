@@ -1,7 +1,9 @@
 .about{
     padding-top: 6.25rem; /* 100px */
+    padding-bottom: 100px;
     @media screen and (min-width: 290.98px) and (max-width: 975.98px){
         padding-top: 80px;
+        padding-bottom: 80px;
     }
 
     &__container{
@@ -9,11 +11,9 @@
         padding: 0px 45px;
         display: flex;
         justify-content: space-between; 
-        margin-bottom: 6.25rem;
         @media screen and (min-width: 290.98px) and (max-width: 975.98px){
             display: block;
-            padding: 0px;
-            margin-bottom: 90px;    
+            padding: 0px;    
         }     
     }
 

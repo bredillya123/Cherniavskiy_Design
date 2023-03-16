@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -104,13 +105,16 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  animation: swipePage 1s linear forwards;
-  animation-delay: 1.7s;
+  -webkit-animation: swipePage 1s linear forwards;
+          animation: swipePage 1s linear forwards;
+  -webkit-animation-delay: 1.7s;
+          animation-delay: 1.7s;
 }
 .preloader__logo {
   margin-bottom: 20px;
   max-width: 220px;
-  animation: bluring 1.2s linear forwards;
+  -webkit-animation: bluring 1.2s linear forwards;
+          animation: bluring 1.2s linear forwards;
 }
 .preloader__img {
   -o-object-fit: cover;
@@ -131,8 +135,23 @@ body {
   left: 0;
   height: 2px;
   opacity: 1;
-  animation-delay: 0.5s;
-  animation: loading 1.5s linear forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation: loading 1.5s linear forwards;
+          animation: loading 1.5s linear forwards;
+}
+
+@-webkit-keyframes bluring {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+    filter: blur(1rem);
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0);
+  }
 }
 
 @keyframes bluring {
@@ -147,12 +166,28 @@ body {
     filter: blur(0);
   }
 }
+@-webkit-keyframes loading {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
 @keyframes loading {
   from {
     width: 0%;
   }
   to {
     width: 100%;
+  }
+}
+@-webkit-keyframes swipePage {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -110%;
   }
 }
 @keyframes swipePage {
@@ -219,6 +254,107 @@ a {
           backdrop-filter: blur(15px);
 }
 
+.social-pl {
+  position: fixed;
+  bottom: 5%;
+  right: 2.3%;
+  width: 60px;
+  z-index: 21;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+@media screen and (min-width: 290.98px) and (max-width: 499.99px) {
+  .social-pl {
+    bottom: 4%;
+    gap: 0px;
+  }
+}
+
+.social-pl__btn {
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 1s all ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.social-pl__btn::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 25px;
+  transition: 0.5s all ease;
+  background: url(../images/socials-plagin/і.svg) no-repeat center center;
+}
+.social-pl__btn--active::before {
+  content: "";
+  background: url(../images/socials-plagin/cross.svg) no-repeat center center;
+}
+.social-pl__btn:hover {
+  box-shadow: 1px 1px 25px 5px rgba(209, 209, 209, 0.59);
+}
+@media screen and (min-width: 290.98px) and (max-width: 499.99px) {
+  .social-pl__btn {
+    transform: scale(0.8);
+  }
+}
+
+.social-pl__list {
+  width: 60px;
+  border-radius: 50px;
+  background: #fff;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.5s all ease;
+  transform: scale(0);
+}
+.social-pl__list--active {
+  bottom: 100%;
+  transform: scale(1);
+}
+@media screen and (min-width: 290.98px) and (max-width: 499.99px) {
+  .social-pl__list--active {
+    transform: scale(0.8);
+  }
+}
+
+.social-pl__elem {
+  margin-bottom: 22px;
+}
+.social-pl__elem:last-child {
+  margin-bottom: 0px;
+}
+
+.social-pl__link {
+  display: block;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer !important;
+  transition: 0.2s all ease-in;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.social-pl__link:hover {
+  transform: scale(1.1);
+}
+
 .header {
   width: 100%;
   position: fixed;
@@ -279,6 +415,7 @@ a {
 .logo__link {
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -351,6 +488,7 @@ a {
   margin-right: 40px;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 .navigation__consulatation-btn:hover {
@@ -362,6 +500,7 @@ a {
   color: #fff;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
   margin-bottom: 15px;
 }
@@ -372,6 +511,7 @@ a {
   opacity: 80%;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 .navigation__social-link:hover {
@@ -408,6 +548,7 @@ a {
   position: relative;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   margin-bottom: 15px;
@@ -453,6 +594,7 @@ a {
   text-decoration: none;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
   margin-bottom: 20px;
   display: flex;
@@ -862,6 +1004,7 @@ a {
   text-decoration: none;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
   transition-delay: 200ms;
   transition: all 0.5s ease-in;
@@ -924,6 +1067,7 @@ a {
   transition: 0.5s all ease;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background: rgba(210, 210, 210, 0.25);

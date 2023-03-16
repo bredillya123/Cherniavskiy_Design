@@ -39,7 +39,7 @@ const wrapperBlur = document.querySelector(".wrapper");
 
 if (iconMenu){  
   iconMenu.addEventListener("click", function(e) {
-    document.body.classList.toggle("_lock")
+    document.body.classList.toggle("_lock");
     iconMenu.classList.toggle("menu-icon--active");
     menuBody.classList.toggle("navigation__main--active");
     wrapperBlur.classList.toggle("wrapper__active");
@@ -176,3 +176,23 @@ window.addEventListener('scroll', () => {
   lastScroll = scrollPosition();
 })
 
+
+// plagin for socials 
+const SocialBtn = document.querySelector(".social-pl__btn");
+const blockSolcial = document.querySelector(".social-pl__list");
+
+if (SocialBtn){  
+  SocialBtn.addEventListener("click", function(e) {
+    SocialBtn.classList.toggle("social-pl__btn--active");
+    blockSolcial.classList.toggle("social-pl__list--active");
+  });
+}
+
+const SocialLinks = document.querySelector(".social-pl__list");
+
+if (SocialLinks){  
+  SocialLinks.addEventListener("click", function(e) {
+    SocialBtn.classList.toggle("social-pl__btn--active");
+    blockSolcial.classList.toggle("social-pl__list--active");
+  });
+}

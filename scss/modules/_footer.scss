@@ -1,0 +1,108 @@
+.footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px 45px 10px 45px;
+        @media screen and (min-width: 290.99px) and (max-width: 767.98px) {
+            flex-direction: column;
+            padding: 10px 10px 10px 10px;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        @media screen and (min-width: 767.98px) and (max-width: 1199.99px) {
+            row-gap: 18px;
+        }
+    }
+
+    &__socials { 
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+        @media screen and (min-width: 767.98px) and (max-width: 1199.99px) {
+            row-gap: 40px;
+        }
+    }
+}
+
+.contact-footer {
+    margin-bottom: 45px;
+    &__item {
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 122.222222%; /* 22/18 */
+        color: #D2D2D2;
+        transition: all 1s ease;
+        &:hover {
+            transform: scale(1.05);
+        }
+        @media screen and (min-width: 767.98px) and (max-width: 1199.99px) {
+            font-size: 15px;
+            line-height: 120%; /* 18/15 */
+            column-gap: 15px;
+        }
+        @media screen and (min-width: 290.99px) and (max-width: 767.98px) {
+            font-size: 14px;
+            line-height: 121.428571%; /* 17/14 */
+        }
+        
+    }  
+    &__icon {
+        max-width: 100%;
+        height: 100%;
+        @media screen and (min-width: 290.99px) and (max-width: 767.98px) {
+            max-width: 20px;
+            max-height: 20px;
+        }
+    }
+    
+}
+
+.social-footer {
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 123.529412%; /* 21/17 */
+        color: #212121;
+        background: #FFFFFF;
+        border-radius: 3px; 
+        padding: 16px 32px;
+        transition: all 0.5s ease;
+        &:hover {
+            box-shadow: rgba(209, 209, 209, 0.59) 1px 1px 25px;
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 40px;
+        row-gap: 20px;    
+    }
+    &__link {
+        transition: all 1s ease;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    &__img {
+        @media screen and (min-width: 767.98px) and (max-width: 1199.99px) {
+            max-width: 20px;
+            max-height: 20px;
+        }
+    }
+}

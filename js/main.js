@@ -164,12 +164,10 @@ const containHide = () => header.classList.contains('header__scroll');
 window.addEventListener('scroll', () => {
   if(scrollPosition() > lastScroll && !containHide()) {
       //scroll down
-      console.log(scrollPosition());
       header.classList.add('header__scroll');
   }
   else if(scrollPosition() < lastScroll && containHide()){
       //scroll up
-      console.log(scrollPosition());
       header.classList.remove('header__scroll');
   }
 

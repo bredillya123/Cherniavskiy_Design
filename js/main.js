@@ -194,3 +194,9 @@ if (SocialLinks){
     blockSolcial.classList.toggle("social-pl__list--active");
   });
 }
+
+
+// Ticker
+const marqueeContainer = document.querySelector(".ticker__marquee");
+const marqueeContent = marqueeContainer.innerHTML;
+marqueeContainer.innerHTML = marqueeContent + marqueeContent;

@@ -1,7 +1,12 @@
 .projects{
+    padding-top: 60px;
     padding-bottom: 100px;
     @media screen and (min-width: 290.98px) and (max-width: 767.98px) {
+        padding-top: 30px;
         padding-bottom: 80px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+        padding-top: 40px;
     }
     &__container {
         display: flex;

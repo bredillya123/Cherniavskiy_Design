@@ -1,0 +1,88 @@
+.main-page {
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;    
+    position: relative;
+    background: linear-gradient(180deg, #000000 -74.07%, rgba(0, 0, 0, 0.2) 100%), url(../projects_img/bg__laptop.jpg) left center no-repeat;
+    background-size: cover; 
+
+    @media screen and (min-width: 290.98px) and (max-width: 450.99px) {
+        background: linear-gradient(180deg, #000000 -74.07%, rgba(0, 0, 0, 0.2) 100%), url(../projects_img/bg__mobile.png) left center  no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 400px;
+        min-height: 0px;
+    }
+
+    &__button {
+        cursor: pointer;
+        text-decoration: none;
+        position: absolute;
+        width: 29%;
+        height: 20%;
+        left: 0;
+        bottom: 0;
+        padding: 55px 45px 55px 45px;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 120%; /* 30/25 */
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background: rgba(210, 210, 210, 0.25);
+        backdrop-filter: blur(10px);
+        column-gap: 40px;
+        @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+            width: 64%;
+            height: 24%;
+            font-size: 23px;
+            line-height: 121.73913%; /* 28/23 */
+            padding: 15px 10px;
+            column-gap: 30px;
+        }
+
+        @media screen and (min-width: 290.98px) and (max-width: 767.98px) {
+            width: 100%;
+            height: 12.5%;
+            column-gap: 15px;
+            padding: 15px 10px;
+            font-size: 16px;
+            line-height: 125%; /* 20/16 */
+        }
+        
+        span {
+            transition: all 1s ease;
+        }
+
+        &:hover span{
+            transform: scale(1.02);
+            
+        }
+    }
+
+    &__button::after {
+        content: '';
+        // position: absolute;
+        width: 10px;
+        height: 30px;
+        background: url(/projects_img/down_arrow.png) no-repeat 100% / 100%, left;
+        animation: arrow-down 2s ease-in-out infinite;
+        @media screen and (min-width: 290.98px) and (max-width: 767.98px) {
+            height: 25px;  
+        }
+    }
+    
+    @keyframes arrow-down {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(8px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }    
+}

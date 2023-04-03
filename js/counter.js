@@ -45,7 +45,7 @@ function windowLoad() {
 					digitsCountersInit(digitsCountersItems);
 				}
 				// Вимкнути відслідковування після спрацювання
-				//observer.unobserve(targetElement);
+				observer.unobserve(targetElement);
 			}
 		});
 	}, options);

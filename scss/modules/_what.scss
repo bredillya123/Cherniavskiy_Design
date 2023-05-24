@@ -194,7 +194,7 @@
 
     @media screen and (min-width: 290.98px) and (max-width: 767.98px) {
         width: calc(100%);
-        min-height: 62.5vw;
+        min-height: 100%;
         padding: 70px 10px;
     }
 
@@ -279,6 +279,7 @@
         width: 295px;
         margin-right: 45px;
         @media screen and (min-width: 290.98px) and (max-width: 767.98px) {
+            width: 100%;
             margin-right: 0px; 
         }
         @media screen and (min-width: 767.98px) and (max-width: 1023.98px) {
@@ -294,6 +295,7 @@
         padding: 15px 32px;
         text-align: center;
         @media screen and (min-width: 290.98px) and (max-width: 767.98px) {
+            width: 100%;
             margin-right: 0px; 
         }
     }

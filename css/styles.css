@@ -1591,7 +1591,7 @@ iframe {
 @media screen and (min-width: 290.98px) and (max-width: 767.98px) {
   .infopopup {
     width: 100%;
-    min-height: 62.5vw;
+    min-height: 100%;
     padding: 70px 10px;
   }
 }
@@ -1688,6 +1688,7 @@ iframe {
 }
 @media screen and (min-width: 290.98px) and (max-width: 767.98px) {
   .infopopup__btn-white {
+    width: 100%;
     margin-right: 0px;
   }
 }
@@ -1706,6 +1707,7 @@ iframe {
 }
 @media screen and (min-width: 290.98px) and (max-width: 767.98px) {
   .infopopup__btn-dark {
+    width: 100%;
     margin-right: 0px;
   }
 }

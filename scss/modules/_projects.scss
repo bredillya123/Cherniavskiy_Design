@@ -15,9 +15,14 @@
         column-gap: 30px;
         row-gap: 30px;
         flex-wrap: wrap;
+
+        @media screen and (min-width: 767.98px) and (max-width: 1023.98px) {
+            column-gap: 15px;
+            row-gap: 15px;
+        }
 }
     &__data {
-        flex: 0 1 48%;
+        flex: 0 1 49%;
         width: 49%;
         display: flex;
         text-decoration: none;

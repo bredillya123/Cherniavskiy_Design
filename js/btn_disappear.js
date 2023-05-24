@@ -1,17 +1,26 @@
 "use strict"
 
 const element = document.querySelector('.social-pl');
+const footerPosition = document.querySelector('.footer').offsetTop;
+const whatSection = document.querySelector("#what");
+const windowHeight = window.innerHeight;
 
-  window.addEventListener('scroll', () => {
-    const scrollPosition = window.scrollY;
-    const footerPosition = document.querySelector('.footer').offsetTop;
+function isBlockVisible(block) {
+  const blockPosition = block.getBoundingClientRect();
+  return blockPosition.top < windowHeight && blockPosition.bottom >= 0;
+}
 
-    if (scrollPosition + window.innerHeight >= footerPosition) {
-        // Делаем элемент невидимым
-        element.classList.add('social-pl__hide');
-    } else {
-        // Возвращаем элемент видимым
-        element.classList.remove('social-pl__hide');
-    }
-  });
+window.addEventListener("scroll", function () {
+  const scrollPosition = window.scrollY;
+
+  if (isBlockVisible(whatSection) || scrollPosition + window.innerHeight >= footerPosition) {
+    element.classList.add('social-pl__hide');
+  } else {
+    element.classList.remove('social-pl__hide');
+  }
+});
+
+
+
+  
 

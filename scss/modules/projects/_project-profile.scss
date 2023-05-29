@@ -1,0 +1,332 @@
+.project-profile {
+    padding-top: 170px;
+    margin-bottom: 90px;
+    @media screen and (min-width: 290.98px) and (max-width: 1024.98px) {
+        padding-top: 90px;
+        margin-bottom: 50px;
+    }
+    &__container {
+        width: 100%;
+        padding: 0px 45px;
+        @media screen and (min-width: 290.98px) and (max-width: 1024.98px) {
+            padding: 0px 10px;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 122.916667%; /* 59/48 */
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 60px;
+        @media screen and (min-width: 767.98px) and (max-width: 1024.98px) {
+            margin-bottom: 50px;
+            font-size: 30px;
+            line-height: 123.333333%; /* 37/30 */
+        }
+        @media screen and (min-width: 290.98px) and (max-width: 767.98px) {
+            font-size: 20px;
+            line-height: 120%; /* 24/20 */
+            margin-bottom: 50px;
+            text-align: center;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        flex-direction: row;
+        column-gap: 75px;
+    }
+
+    &__data {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 15px;
+    }
+
+    &__data-container {
+        display: none;
+        @media screen and (min-width: 640.98px) and (max-width: 1024.98px) {
+            display: block;
+        }
+    }
+
+    &__item {
+        flex: 0 1 50%;
+        @media screen and (min-width: 290.98px) and (max-width: 1024.98px) {
+            flex: 0 1 100%;
+            
+        }
+    }
+
+    &__info {
+        flex: 0 1 50%;
+    }
+
+    &__info p {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 21px;
+        color: #D2D2D2;
+        display: flex;
+        margin: 10px 0px 20px 0px;
+        @media screen and (min-width: 290.98px) and (max-width: 1024.98px) {
+            font-size: 16px;
+            line-height: 20px;
+        } 
+    }
+
+    &__feature {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 120%; /* 24/20 */
+        color: #FFFFFF;
+        margin: 10px 10px 10px 0px;
+        @media screen and (min-width: 290.98px) and (max-width: 1024.98px) {
+            font-size: 16px;
+        }
+        
+        
+    }
+
+    &__content {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 120%; /* 24/20 */
+        color: #D2D2D2;
+        @media screen and (min-width: 767.98px) and (max-width: 1024.98px) {
+            font-size: 16px;
+        }
+    }
+
+    &__list {
+        @media screen and (min-width: 640.98px) and (max-width: 1024.98px) {
+            li:nth-child(n+5) {
+              display: none;
+            }
+          }
+          @media screen and (min-width: 1024.98px) {
+            margin-bottom: 50px;
+          }
+    }
+
+    &__btn {
+        display: flex;
+        
+        @media screen and (min-width: 290.98px) and (max-width: 767.98px) {
+            display: block;
+            width: 100%;
+
+            &__btn a {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.main-slider {
+    @media (min-width: 290.98px) and (max-width: 1024.98px) {
+    &__info {
+        display: flex;
+        flex-direction: column;
+        row-gap: 80px;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 10px;
+        padding-top: 60px;
+    }
+}
+}
+
+.project-profile__planning {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    @media screen and (min-width: 290.98px) and (max-width: 767.98px) {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+}
+
+.planning {
+    &__block {
+        display: flex;
+        justify-content: space-around;
+        @media screen and (min-width: 290.98px) and (max-width: 1200.98px) {
+            flex-direction: column;
+        }
+    }
+
+    &__slider {
+        flex: 0 1 48%;
+    }
+
+    &__info {
+        flex: 0 1 48%;
+    }
+}
+
+.planning-info {
+    &__title {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 121.428571%; /* 34/28 */
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 50px;
+        @media screen and (min-width: 290.98px) and (max-width: 1200.98px) {
+            text-align: center;
+
+        }
+        @media screen and (min-width: 767.98px) and (max-width: 1200.98px) {
+            font-size: 25px;
+            line-height: 120%; /* 30/25 */
+        }
+        @media screen and (min-width: 290.98px) and (max-width: 767.98px) {
+            font-size: 20px;
+            line-height: 120%; /* 24/20 */
+            margin-bottom: 30px;
+        }
+        
+    }
+
+    &__details {
+        display: flex;
+        column-gap: 15px;
+        @media screen and (min-width: 290.98px) and (max-width: 1200.98px) {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        @media screen and (min-width: 290.98px) and (max-width: 520.98px) {
+            flex-direction: column;
+        }
+    }
+
+    &__block {
+        flex: 0 1 50%;
+        @media screen and (min-width: 290.98px) and (max-width: 520.98px) {
+            flex: 0 1 100%;
+        }
+    }
+    &__bnt-more {
+        display: none;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 120%; /* 18/15 */
+        text-align: center;
+        color: #D2D2D2;
+        padding: 16px 50px;
+        margin: 25px 50px 0px 50px;
+        transition: all 0.5s ease;
+        &:hover {
+            transform: scale(1.01);
+        }
+        @media screen and (min-width: 290.98px) and (max-width: 640.98px) {
+            display: block;
+        }
+    }
+}
+
+.planning__subtitle {
+    display: flex;
+    column-gap: 15px;
+    margin-bottom: 35px;
+    @media screen and (min-width: 290.98px) and (max-width: 678.98px) {
+        margin-bottom: 20px;
+    }
+    
+    &__item {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 122.222222%; /* 22/18 */
+        color: #FFFFFF;
+        flex: 0 1 50%;
+        @media screen and (min-width: 290.98px) and (max-width: 678.98px) {
+            font-size: 14px;
+            line-height: 121.428571%; /* 17/14 */
+        }   
+    }
+
+    &__item span {
+        margin-right: 15px;
+    }
+}
+
+.list-planning {
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 123.529412%; /* 21/17 */
+        color: #D2D2D2;
+        margin-bottom: 15px;
+        column-gap: 15px;
+        @media screen and (min-width: 290.98px) and (max-width: 678.98px) {
+            font-size: 14px;
+            line-height: 121.428571%; /* 17/14 */
+        }
+    }
+
+    &__item div {
+        flex: 0 1 50%;
+    }
+
+    &__item div span{
+        margin-right: 30px;
+        @media screen and (min-width: 290.98px) and (max-width: 678.98px) {
+            margin-right: 25px;
+        }
+    }
+
+}
+
+// .list-planning ol {
+//     counter-reset: item!important;
+// }
+
+// .list-planning ol li::before {
+//     content: counter(item) ". ";
+//     counter-increment: item;
+//     margin-right: 26px;
+//     @media screen and (min-width: 290.98px) and (max-width: 767.98px) {
+//         margin-right: 19px;
+//     }
+// }
+
+.btn-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 110px;
+    @media screen and (min-width: 767.98px) and (max-width: 1200.98px) {
+        margin-bottom: 90px;
+    }
+    @media screen and (min-width: 290.98px) and (max-width: 520.98px) {
+        display: block;
+        margin: 0px 10px;
+        margin-bottom: 80px;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 123.529412%; /* 21/17 */
+        color: #FFFFFF;
+        background: #212121;
+        border: 1px solid #FFFFFF;
+        border-radius: 3px;
+        padding: 15px 30px;
+        transition: all 0.5s ease;
+        @media screen and (min-width: 290.98px) and (max-width: 520.98px) {
+            display: block;
+            text-align: center;
+        }
+        &:hover {
+            box-shadow: rgba(209, 209, 209, 0.59) 1px 1px 25px;
+            transform: scale(1.01);
+        }
+        
+    }
+}

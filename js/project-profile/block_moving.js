@@ -93,72 +93,8 @@ mediaQuery1.addEventListener('change', handleMediaQuery1);
 // // Вызываем функцию handleMediaQuery для начальной проверки медиа запроса
 handleMediaQuery1(mediaQuery1);
 
-// =================================================Block moving of project-profile__list
-
-const list = document.querySelector('.project-profile__list');
-const list2 = document.querySelector('.project-profile__data-container');
-const liList = Array.from(list.querySelectorAll('li'));
-
-window.addEventListener('resize', function() {
-  const screenWidth = window.innerWidth;
-  if (screenWidth >= 640 && screenWidth <= 1024) {
-    let count = 0;
-    for (let i = 4; i < liList.length; i++) {
-      if (count < 4) {
-        list2.appendChild(liList[i]);
-        count++;
-      } else {
-        break;
-      }
-    }
-  } else {
-    const liList2 = Array.from(list2.querySelectorAll('li'));
-    liList2.forEach(function(li) {
-      list.appendChild(li);
-    });
-  }
-});
-
-// =================================================
-// Получить доступ к списку, который нужно скрыть.
-const hiddenList = document.querySelector('ol.planning-info__catalogue');
-// Получить все элементы списка
-const hiddenListItems = hiddenList.querySelectorAll('li');
 
 
-// Разделить элементы на две группы, создаем два пустых массива
-const list1Items = [];
-const list2Items = [];
-const numContainer = document.querySelector('.list-planning__nums');
-
-for (let i = 0; i < hiddenListItems.length; i++) {
-  const item = hiddenListItems[i];
-  const itemText = item.textContent;
-  
-  
-  if (list2Items.length < list1Items.length) {
-    list2Items.push(item);
-  } else {
-    list1Items.push(item);
-  }
-
-  const span = document.createElement('span');
-  
-  // span.classList.add('list-planning__num');
-span.textContent = i + 1;
-console.log(span.textContent);
-numContainer.appendChild(span);
-  
-  
-}
-
-
-// Получаем доступ к двум спискам, в которые нужно поместить элементы
-const listF = document.getElementById('firstList');
-const listS = document.getElementById('secondList');
-// Добавляем элементы в соответствующие списки
-list1Items.forEach(item => listF.appendChild(item));
-list2Items.forEach(item=> listS.appendChild(item));
 
 
 

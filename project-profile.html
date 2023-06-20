@@ -20,7 +20,7 @@
 		</div>
 		<div class="preloader__load"></div>
 	</div>
-    <div class="wrapper">
+    <div class="wrapper" data-page="project-profile">
 
         <div id="social" class="social-pl">					
 			<ul class="social-pl__list">
@@ -154,6 +154,10 @@
 					</div>
 					<div class="planning-info__details">
 						<div class="planning-info__block">
+							<div class="planning-info__subtitles planning__subtitle planning__subtitle--big">
+								<h3 class="planning__subtitle__item"><span>№</span>THE ROOM</h3>
+								<h3 class="planning__subtitle__item">AREA, M2</h3>
+							</div>
 							<ol class="planning-info__catalogue">
 								<li class="list-planning__item"><div class="list-planning__num">Hallway</div><div>11.5</div></li>
 								<li class="list-planning__item"><div class="list-planning__num">Wardrobe</div><div>11.5</div></li>
@@ -165,6 +169,7 @@
 								<li class="list-planning__item"><div class="list-planning__num">Bathroom</div><div>11.5</div></li>
 								<li class="list-planning__item"><div class="list-planning__num">WC</div><div>11.5</div></li>
 								<li class="list-planning__item"><div class="list-planning__num">Corridor</div><div>11.5</div></li>
+								<li class="list-planning__item"><div class="list-planning__num">Corridor</div><div>11.5</div></li>
 							</ol>
 							<div class="planning-info__subtitles planning__subtitle">
 								<h3 class="planning__subtitle__item"><span>№</span>THE ROOM</h3>
@@ -172,18 +177,6 @@
 							</div>
 							<div class="list-planning">
 								<ol id="firstList" class="planning-info__list"></ol>
-							<!-- <ol class="planning-info__list">
-								<li class="list-planning__item"><div>Hallway</div><div>11.5</div></li>
-								<li class="list-planning__item"><div>Wardrobe</div><div>11.5</div></li>
-								<li class="list-planning__item"><div>Guest WC</div><div>11.5</div></li>
-								<li class="list-planning__item"><div>Kitchen</div><div>11.5</div></li>
-								<li class="list-planning__item"><div>Pantry</div><div>11.5</div></li>
-								<li class="list-planning__item"><div>Laundry</div><div>11.5</div></li>
-								<li class="list-planning__item"><div>Bedroom</div><div>11.5</div></li>
-								<li class="list-planning__item"><div>Bathroom</div><div>11.5</div></li>
-								<li class="list-planning__item"><div>WC</div><div>11.5</div></li>
-								<li class="list-planning__item"><div>Corridor</div><div>11.5</div></li>
-							</ol> -->
 							</div>
 						</div>
 
@@ -194,23 +187,11 @@
 							</div>
 							<div class="list-planning">
 								<ol id="secondList" class="planning-info__list planning-info__list"></ol>
-							<!-- <ol class="planning-info__list list-planning">
-								<li class="list-planning__item"><div>Hallway</div><div>11.5</div></li>
-								<li class="list-planning__item"><div>Wardrobe</div><div>11.5</div></li>
-								<li class="list-planning__item"><div>Guest WC</div><div>11.5</div></li>
-								<li class="list-planning__item"><div>Kitchen</div><div>11.5</div></li>
-								<li class="list-planning__item"><div>Pantry</div><div>11.5</div></li>
-								<li class="list-planning__item"><div>Laundry</div><div>11.5</div></li>
-								<li class="list-planning__item"><div>Bedroom</div><div>11.5</div></li>
-								<li class="list-planning__item"><div>Bathroom</div><div>11.5</div></li>
-								<li class="list-planning__item"><div>WC</div><div>11.5</div></li>
-								<li class="list-planning__item"><div>Corridor</div><div>11.5</div></li>
-							</ol> -->
 							</div>
 						</div>
 						
 					</div>
-					<div class="planning-info__bnt-more"> Show more →</div>
+					<div id="btn-more" class="planning-info__bnt-more"> Show more →</div>
 				</div>
 			</div>
 		</section>
@@ -274,7 +255,5 @@
 	
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<script src="./js/main.js"></script>
-<script src="./js/btn_disappear.js"></script>
-<script src="./js/block_moving.js"></script>
+<script type="module" src="./js/main.js"></script>
 </html>

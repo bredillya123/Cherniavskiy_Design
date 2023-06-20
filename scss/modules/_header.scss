@@ -148,106 +148,111 @@ a {
     z-index: 21;
     display: flex;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;
     gap: 22px;
     transition: all 0.5s ease;
-    
+    max-height: 60px;
+
     &__hide {
-        transform: scale(0,0);
+        transform: scale(0);
     }
-    @media screen and (min-width: 290.98px) and (max-width: 499.99px){
-        bottom: 4%;
-        gap: 0px;
-    } 
-}
 
-
-.social-pl__btn {
-    width: 60px;
-    height: 60px;
-    background: #fff;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: 1s all ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-
-    &::before {
-        content: '';
+    &__list {        
         position: absolute;
-        display: block;
-        width: 25px;
-        height: 27px;
-        transition: 0.5s all ease;
-        background: url(../images/socials-plagin/і.svg) no-repeat center center;
+        top: 400%; 
+        width: 60px;
+        border-radius: 50px;
+        background: #fff;
+        z-index: -1;
+        padding: 22px 18px;
+        flex-direction: column;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        transform: scale(0);
+        opacity: 0;
+        visibility: hidden; 
+
+        &--active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: -550%;
+            transform: scale(1);
+            opacity: 1;
+            visibility: visible;
+            @media screen and (min-width: 210px) and (max-width: 499.97px) {
+                top: -480%;
+            }
+
+        }
     }
 
-    &--active {
+    &__elem {
+        margin-bottom: 22px;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+
+    &__link {
+        display: block;
+        width: 34px;
+        height: 34px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer!important;
+        transition: 0.2s all ease-in;
+        user-select: none;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__btn {
+        width: 60px;
+        height: 60px;
+        background: #fff;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: 1s all ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
         &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 25px;
+            height: 27px;
+            transition: 0.5s all ease;
+            background: url(../images/socials-plagin/і.svg) no-repeat center center;
+        }
+
+        &--active::before {
             content: '';
             background: url(../images/socials-plagin/cross.svg) no-repeat center center;
         }
-        
+
+        &:hover {
+            box-shadow: 1px 1px 25px 5px rgba(209, 209, 209, 0.59);
+        }
     }
 
-    &:hover {
-        
-        box-shadow: 1px 1px 25px 5px rgba(209,209,209,0.59);
-    }   
-    
     @media screen and (min-width: 290.98px) and (max-width: 499.99px){
-        transform: scale(0.8);
-    }
-}
+        bottom: 4%;
+        gap: 0px;
 
-.social-pl__list {
-    width: 60px;
-    border-radius: 50px;
-    background: #fff;
-    z-index: -1;
-    display: flex;
-    justify-content: center;
-    padding: 22px 18px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: 0.5s all ease;
-    transform: scale(0);
-
-    &--active {
-        bottom: 100%;
-        transform: scale(1);
-
-        @media screen and (min-width: 290.98px) and (max-width: 499.99px){
+        &__btn {
             transform: scale(0.8);
-        }        
-    }
-    
-}
+        }
 
-.social-pl__elem {
-    margin-bottom: 22px;
-
-    &:last-child {
-        margin-bottom: 0px; 
-    }
-}
-
-.social-pl__link {
-    display: block;
-    width: 34px;
-    height: 34px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer!important;
-    transition: 0.2s all ease-in;
-    user-select: none;
-
-    &:hover {
-        transform: scale(1.1);
+        &__list {
+            transform: scale(0.8);
+        }
     }
 }
 

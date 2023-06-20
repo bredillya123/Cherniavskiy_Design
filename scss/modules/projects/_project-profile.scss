@@ -190,6 +190,15 @@
         
     }
 
+    &__catalogue {
+        display: none;
+
+        // @media screen and (min-width: 290.98px) and (max-width: 520.98px) {
+        //     display: none;
+        // }
+    }
+    
+
     &__details {
         display: flex;
         column-gap: 15px;
@@ -233,6 +242,18 @@
     margin-bottom: 35px;
     @media screen and (min-width: 290.98px) and (max-width: 678.98px) {
         margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 290.98px) and (max-width: 520.98px) {
+        display: none;
+    }
+
+    &--big {
+        display: none;
+
+        @media screen and (min-width: 290.98px) and (max-width: 520.98px) {
+            display: flex;
+        }
     }
     
     &__item {
@@ -328,5 +349,17 @@
             transform: scale(1.01);
         }
         
+    }
+}
+
+#firstList {
+    @media screen and (min-width: 290.98px) and (max-width: 520.98px) {
+        display: block;
+    }
+}
+
+#secondList {
+    @media screen and (min-width: 290.98px) and (max-width: 520.98px) {
+        display: none;
     }
 }

@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         import("./every-page/burger.js");//every page burger functions & plugin socials
         import("./every-page/cursor.js");//every page custom cursor
         import("./every-page/btn_disappear.js");//every page script for disappear
+        import("./every-page/form.js");//every page scripy for contact form
 
         // specific individual modules
         import("./main-page/slider.js");//main page slider top section & ticker for slide words
@@ -19,15 +20,18 @@ document.addEventListener('DOMContentLoaded', function() {
         import("./every-page/burger.js");//every page burger functions & plugin socials
         import("./every-page/cursor.js");//every page custom cursor
         import("./every-page/btn_disappear.js");//every page script for disappear
+        import("./every-page/form.js");//every page scripy for contact form
 
         // specific individual modules
         import("./project-profile/list-cutter.js");
         import("./project-profile/block_moving.js");
+        import("./project-profile/swiper.js");
     } else if (currentPage === 'projects') {
         // every page modules
         import("./every-page/burger.js");//every page burger functions & plugin socials
         import("./every-page/cursor.js");//every page custom cursor
         import("./every-page/btn_disappear.js");//every page script for disappear
+        import("./every-page/form.js");//every page scripy for contact form
 
         // specific individual modules
     } else if (currentPage === '404') {

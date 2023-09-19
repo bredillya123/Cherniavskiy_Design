@@ -181,6 +181,8 @@
     max-height: 100vh;
 
     &-pagination {
+        margin-top: 35px;
+        position: static;
         bottom: 0;
 
         &-bullet {
@@ -194,7 +196,6 @@
             &-active {
                 width: 45px;
                 height: 2px;
-                transform: rotate(-45deg);
             }
         }
     }

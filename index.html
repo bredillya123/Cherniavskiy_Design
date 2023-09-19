@@ -58,7 +58,7 @@
 					<div class="navigation__btns">
 
 						<div class="navigation__sub-btns">
-							<a href="#" class="navigation__consulatation-btn">Get a consultation</a>
+							<a href="#" class="navigation__consulatation-btn open-form">Get a consultation</a>
 
 							<!-- <div class="navigation__langs langs">
 								<a href="#" class="langs__btn langs__btn--active">UA</a>
@@ -114,6 +114,218 @@
 					</div>					
 				</nav>
 				
+			</div>
+
+			<div class="consultation" id="consultation">
+				<div class="consultation__form">
+					<a href="#" class="consultation__form--close">
+						<svg class="cross" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+							<path d="M25.9659 27.8815L1.85573 3.9965C0.831514 2.98185 0.489052 1.67581 1.09088 1.0796C1.69271 0.483391 3.01107 0.822653 4.03529 1.8373L28.1455 25.7223C29.1697 26.7369 29.5122 28.043 28.9103 28.6392C28.3085 29.2354 26.9902 28.8961 25.9659 27.8815Z" fill="white"/>
+							<path d="M28.1444 4.27776L4.03419 28.1627C3.00997 29.1774 1.69161 29.5166 1.08978 28.9204C0.487949 28.3242 0.830411 27.0182 1.85463 26.0035L25.9648 2.11856C26.989 1.10391 28.3074 0.764651 28.9092 1.36086C29.5111 1.95707 29.1686 3.26311 28.1444 4.27776Z" fill="white"/>
+						</svg>
+					</a>
+					<form class="form" id="form" method="POST" action="../chernyavskiy/telegram.php" enctype="multipart/form-data">
+						<h3>Get a consultation</h3>
+						<div class="form__short">
+	
+							<input type="text" name="form_name" id="name" required placeholder="Enter your name*" maxlength="50">			
+							
+							<input type="email" name="form_email" id="email" required placeholder="Enter your E-mail*" maxlength="50">			
+							
+							<input class="only-nums" type="text" name="form_phone" id="phone" required placeholder="Enter your phone number*" maxlength="17">
+							
+						</div>
+	
+						<div class="form__full">
+							<h4>Size</h4>
+							<input class="text-area only-nums" type="text" name="area" id="area" placeholder="Indicate Object area" maxlength="10">
+	
+							<h4>Object type</h4>
+							<div class="form__checkbox-block">
+								<ul class="form__list-checkbox">
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="measurements" id="measurements" value="Measurements">
+										<label for="measurements">Measurements</label>								
+									</li>
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="planning_solution" id="planning_solution" value="Planning solution">
+										<label for="planning_solution">Planning solution</label>								
+									</li>
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="specification" id="specification" value="Specification">
+										<label for="specification">Specification</label>								
+									</li>
+								</ul>
+								<ul class="form__list-checkbox">
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="visialization" id="visialization" value="Visialization">
+										<label for="visialization">Visialization</label>								
+									</li>
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="working_drawings" id="working_drawings" value="Working drawings">
+										<label for="working_drawings">Working drawings</label>								
+									</li>
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="authors_supervision" id="authors_supervision" value="Authors supervision">
+										<label for="authors_supervision">Author’s supervision</label>								
+									</li>
+								</ul>
+							</div>
+	
+							<h4>Number of floors</h4>
+							<input class="text-area only-nums" type="text" name="floors" id="floors" placeholder="Input the floors" maxlength="10">
+	
+							<h4>Stylistics</h4>
+							<select class="text-area" name="styles" id="styles">
+								<option value="0" disabled>Select from the list</option>
+								<option value="1">Scandinavian style</option>
+								<option value="2">Minimalism</option>
+								<option value="3">Modernism</option>
+								<option value="4">Biophilic design</option>
+								<option value="5">Maximalism</option>
+								<option value="6">Vintage and retro</option>
+								<option value="7">Industrial</option>
+								<option value="8">Grunge (Boho-shabby-chic)</option>
+								<option value="9">Eco-friendly design</option>
+							</select>
+	
+							<div class="select-container ">
+								<div class="custom-select " id="custom-select">
+									<span class="select-text">Select from the list</span>
+									<svg class="arrow-svg " xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
+										<path d="M0 0.287109L5 10.2921L10 0.287109L0 0.287109Z" fill="white"/>
+									</svg>
+								</div>
+								<ul class="select-list">
+									<li class="select-elem" data-position="0">Select from the list</li>
+									<li class="select-elem" data-position="1" onclick="selectOn(this);">Scandinavian style</li>
+									<li class="select-elem" data-position="2" onclick="selectOn(this);">Scandinavian style</li>
+									<li class="select-elem" data-position="3" onclick="selectOn(this);">Scandinavian style</li>
+									<li class="select-elem" data-position="4" onclick="selectOn(this);">Scandinavian style</li>
+									<li class="select-elem" data-position="5" onclick="selectOn(this);">Scandinavian style</li>
+									<li class="select-elem" data-position="6" onclick="selectOn(this);">Scandinavian style</li>
+									<li class="select-elem" data-position="7" onclick="selectOn(this);">Scandinavian style</li>
+									<li class="select-elem" data-position="8" onclick="selectOn(this);">Scandinavian style</li>
+									<li class="select-elem" data-position="9" onclick="selectOn(this);">Scandinavian style</li>
+								</ul>
+							</div>
+	
+							
+							<h4>Composition of premises</h4>
+							<div class="form__checkbox-block">
+								<ul class="form__list-checkbox">
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="hallway" id="hallway">
+										<label for="hallway">Hallway</label>								
+									</li>
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="wardrobe" id="wardrobe">
+										<label for="wardrobe">Wardrobe</label>								
+									</li>
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="master_wardrobe" id="master_wardrobe">
+										<label for="master_wardrobe">Master wardrobe</label>								
+									</li>
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="terrace" id="terrace">
+										<label for="terrace">Terrace</label>								
+									</li>
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="gym" id="gym">
+										<label for="gym">Sports/gym</label>								
+									</li>
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="balcony" id="balcony">
+										<label for="balcony">Balcony</label>								
+									</li>
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="pantry" id="pantry">
+										<label for="pantry">Pantry</label>								
+									</li>
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="cabinet" id="cabinet">
+										<label for="cabinet">Cabinet</label>								
+									</li>
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="playroom" id="playroom">
+										<label for="playroom">Playroom</label>								
+									</li>
+								</ul>
+								<ul class="form__list-checkbox">
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="guest_bathroom" id="guest_bathroom">
+										<label for="guest_bathroom">Guest bathroom</label>								
+									</li>
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="kitchen" id="kitchen">
+										<label for="kitchen">Kitchen</label>								
+									</li>
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="master_bathroom" id="master_bathroom">
+										<label for="master_bathroom">Master bathroom</label>								
+									</li>
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="garage" id="garage">
+										<label for="garage">Garage</label>								
+									</li>
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="bath" id="bath">
+										<label for="bath">Sauna/Bath/Hamam</label>								
+									</li>
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="master_bedroom" id="master_bedroom">
+										<label for="master_bedroom">Master bedroom</label>								
+									</li>
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="living_room" id="living_room">
+										<label for="living_room">Living room</label>								
+									</li>
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="childrens_wardrobe" id="childrens_wardrobe">
+										<label for="childrens_wardrobe">Children’s wardrobe</label>								
+									</li>
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="childrens_room" id="childrens_room">
+										<label for="childrens_room">Children’s room</label>								
+									</li>
+								</ul>
+							</div>
+	
+							<h4>Engineering systems</h4>
+							<div class="form__checkbox-block">
+								<ul class="form__list-checkbox">
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="ventilation_system" id="ventilation_system">
+										<label for="ventilation_system">Ventilation system</label>								
+									</li>
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="water_supply_system" id="water_supply_system">
+										<label for="water_supply_system">Water supply system</label>								
+									</li>
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="smart_home_system" id="smart_home_system">
+										<label for="smart_home_system">Smart home system</label>								
+									</li>
+								</ul>
+								<ul class="form__list-checkbox">
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="air_conditioning_system" id="air_conditioning_system">
+										<label for="air_conditioning_system">Air conditioning system</label>								
+									</li>
+									<li class="form__elem-checkbox">
+										<input type="checkbox" name="security_system" id="security_system">
+										<label for="security_system">Security system</label>								
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="form__btns">
+							<a class="form__btn form__btn--show" href="#" id="show-form">Continue filling</a>
+							<input class="form__btn form__btn--send" id="send-form" type="submit" value="Send">
+						</div>
+					</form>
+				</div>
 			</div>
 		</header>
 
@@ -297,7 +509,7 @@
 							</div>
 							<div class="infopopup__btns">
 								<a href="#" class="social-footer__button infopopup__btn-white">Download examples</a>
-								<a href="#" class="navigation__consulatation-btn infopopup__btn-dark">Сontact us</a>
+								<a href="#" class="navigation__consulatation-btn infopopup__btn-dark open-form">Сontact us</a>
 							</div>
 							<a class="infopopup-close" id="drawings-close">
 								<img src="./images/what-we-do/popup/close.svg" alt="Close" class="infopopup__close">
@@ -316,7 +528,7 @@
 							</div>
 							<div class="infopopup__btns">
 								<a href="#" class="social-footer__button infopopup__btn-white">Download examples</a>
-								<a href="#" class="navigation__consulatation-btn infopopup__btn-dark">Сontact us</a>
+								<a href="#" class="navigation__consulatation-btn infopopup__btn-dark open-form">Сontact us</a>
 							</div>
 							<a class="infopopup-close" id="vizualization-close">
 								<img src="./images/what-we-do/popup/close.svg" alt="Close" class="infopopup__close">
@@ -334,7 +546,7 @@
 								<p class="infopopup__text">We also take over the purchase of everything you need for your apartment. We guarantee that the client will get what is shown in the design project.</p>
 							</div>
 							<div class="infopopup__btns">
-								<a href="#" class="navigation__consulatation-btn infopopup__btn-dark">Сontact us</a>
+								<a href="#" class="navigation__consulatation-btn infopopup__btn-dark open-form">Сontact us</a>
 							</div>
 							<a class="infopopup-close" id="implementation-close">
 								<img src="./images/what-we-do/popup/close.svg" alt="Close" class="infopopup__close">
@@ -427,7 +639,7 @@
 					</a>
 				</div>
 				<div class="footer__socials social-footer">
-					<a href="#" class="social-footer__button">Get a consultation</a>
+					<a href="#" class="social-footer__button open-form">Get a consultation</a>
 					<div class="social-footer__list">		
 						<a href="https://www.behance.net/egordiz" target="_blank" class="social-footer__link">
 							<img class="social-footer__img" src="./images/header/behance.svg" alt="behance">

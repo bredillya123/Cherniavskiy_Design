@@ -85,6 +85,9 @@
         &:hover {
             box-shadow: rgba(209, 209, 209, 0.59) 1px 1px 25px;
         }
+        &--top {
+            margin-bottom: 10%;
+        }
     }
     &__list {
         display: flex;

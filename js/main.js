@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         import("./main-page/slider.js");//main page slider top section & ticker for slide words
         import("./main-page/counter.js");//main page counter on loading
         import("./main-page/what-animation.js");//main page animation section what
+        import("./main-page/modal.js");//main page modal window
     } else if (currentPage === 'project-profile') {
         // every page modules
         import("./every-page/burger.js");//every page burger functions & plugin socials

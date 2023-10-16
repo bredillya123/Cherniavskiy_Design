@@ -76,7 +76,9 @@
 								<li class="navigation__elem"><a data-goto=".about" href="#" class="navigation__link">About us</a></li>
 								<li class="navigation__elem"><a href="projects.html" class="navigation__link">Projects</a></li>
 							</ul>
+							
 							<div class="navigation__contancts">
+								
 								<div class="navigation__contancts-phone">
 									<a href="mailto:cherniavski.des@gmail.com" class="navigation__phone-link">
 										<img src="./images/header/Mail.svg" alt="icon" class="navigation__phone-icon">
@@ -88,7 +90,7 @@
 										<span class="navigation__phone-num">+380662231027</span>
 									</a>
 								</div>
-
+								<a href="#" class="social-footer__button social-footer__button--top open-form">Get a consultation</a>
 								<div class="navigation__contancts-socials">		
 									<a href="https://www.behance.net/egordiz" target="_blank" class="navigation__contancts-socials-link">
 										<img class="navigation__contancts-socials-img" src="./images/header/behance.svg" alt="behance">
@@ -116,6 +118,29 @@
 				
 			</div>
 
+			<div class="modal-back">
+				<div class="modal-popup">
+					<form class="popup-form" id="form-modal" method="POST" action="../chernyavskiy/telegram.php" enctype="multipart/form-data">
+						<h2>Get a 10% discount on your first order</h2>
+						<div class="form__short">
+		
+							<input type="text" name="form_name" id="name-modal" required placeholder="Enter your name*" maxlength="50">			
+							
+							<input type="email" name="form_email" id="email-modal" required placeholder="Enter your E-mail*" maxlength="50">			
+							
+							<input class="only-nums" type="text" name="form_phone" id="phone-modal" required placeholder="Enter your phone number*" maxlength="17">
+							
+						</div>
+						<div class="form__btns modal-btns">
+							<input class="form__btn form__btn--send" id="send-form" type="submit" value="Send">
+						</div>
+					</form>
+					<a class="infopopup-close modal-close" id="modal-close">
+						<img src="./images/what-we-do/popup/close.svg" alt="Close" class="infopopup__close">
+					</a>
+				</div>
+			</div>
+			
 			<div class="consultation" id="consultation">
 				<div class="consultation__form">
 					<a href="#" class="consultation__form--close">

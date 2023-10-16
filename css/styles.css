@@ -565,7 +565,7 @@ a {
 }
 .navigation__contancts-phone {
   width: 100%;
-  margin-bottom: 20%;
+  margin-bottom: 10%;
   display: flex;
   flex-direction: column;
 }
@@ -760,6 +760,77 @@ a {
   transform: rotate(45deg) translate(0px, 50%);
 }
 
+div.modal-back {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0%;
+  bottom: -100%;
+  transition: 0.4s ease-in-out;
+}
+div.modal-back--active {
+  bottom: 0%;
+}
+div.modal-back::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  z-index: 19;
+}
+div.modal-popup {
+  width: 50%;
+  padding: 30px;
+  background: #212121;
+  position: relative;
+  z-index: 20;
+}
+div.modal-popup h2 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 40px 0px;
+}
+@media screen and (min-width: 210px) and (max-width: 1023.99px) {
+  div.modal-popup h2 {
+    font-size: 23px;
+  }
+}
+@media screen and (min-width: 210px) and (max-width: 767.97px) {
+  div.modal-popup h2 {
+    padding-top: 0px;
+  }
+}
+@media screen and (min-width: 210px) and (max-width: 767.97px) {
+  div.modal-popup {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+  }
+}
+div.modal-btns {
+  justify-content: flex-end;
+  margin: 0px;
+}
+@media screen and (min-width: 210px) and (max-width: 1023.99px) {
+  div.modal-btns input {
+    width: 100%;
+  }
+}
+
+a.modal-close {
+  top: 5%;
+  right: 4%;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1064px) {
   .navigation__list {
     min-width: 61%;
@@ -807,6 +878,7 @@ a {
     margin-bottom: 15px;
   }
   .navigation__contancts {
+    width: 100%;
     display: block;
   }
   .navigation__contancts-phone {
@@ -2572,6 +2644,9 @@ iframe {
 }
 .social-footer__button:hover {
   box-shadow: rgba(209, 209, 209, 0.59) 1px 1px 25px;
+}
+.social-footer__button--top {
+  margin-bottom: 10%;
 }
 .social-footer__list {
   display: flex;

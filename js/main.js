@@ -1,43 +1,43 @@
 "use strict";
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
     var wrapper = document.querySelector('.wrapper');
     var currentPage = wrapper.getAttribute('data-page');
   
     if (currentPage === 'main') {
         // every page modules
-        import("./every-page/burger.js");//every page burger functions & plugin socials
-        import("./every-page/cursor.js");//every page custom cursor
-        import("./every-page/btn_disappear.js");//every page script for disappear
-        import("./every-page/form.js");//every page scripy for contact form
+        await import("./every-page/burger.js");//every page burger functions & plugin socials
+        await import("./every-page/cursor.js");//every page custom cursor
+        await import("./every-page/btn_disappear.js");//every page script for disappear
+        await import("./every-page/form.js");//every page scripy for contact form
 
         // specific individual modules
-        import("./main-page/slider.js");//main page slider top section & ticker for slide words
-        import("./main-page/counter.js");//main page counter on loading
-        import("./main-page/what-animation.js");//main page animation section what
-        import("./main-page/modal.js");//main page modal window
+        await import("./main-page/slider.js");//main page slider top section & ticker for slide words
+        await import("./main-page/counter.js");//main page counter on loading
+        await import("./main-page/what-animation.js");//main page animation section what
+        await import("./main-page/modal.js");//main page modal window
     } else if (currentPage === 'project-profile') {
         // every page modules
-        import("./every-page/burger.js");//every page burger functions & plugin socials
-        import("./every-page/cursor.js");//every page custom cursor
-        import("./every-page/btn_disappear.js");//every page script for disappear
-        import("./every-page/form.js");//every page scripy for contact form
+        await import("./every-page/burger.js");//every page burger functions & plugin socials
+        await import("./every-page/cursor.js");//every page custom cursor
+        await import("./every-page/btn_disappear.js");//every page script for disappear
+        await import("./every-page/form.js");//every page scripy for contact form
 
         // specific individual modules
-        import("./project-profile/list-cutter.js");
-        import("./project-profile/block_moving.js");
-        import("./project-profile/swiper.js");
+        await import("./project-profile/list-cutter.js");
+        await import("./project-profile/block_moving.js");
+        await import("./project-profile/swiper.js");
     } else if (currentPage === 'projects') {
         // every page modules
-        import("./every-page/burger.js");//every page burger functions & plugin socials
-        import("./every-page/cursor.js");//every page custom cursor
-        import("./every-page/btn_disappear.js");//every page script for disappear
-        import("./every-page/form.js");//every page scripy for contact form
+        await import("./every-page/burger.js");//every page burger functions & plugin socials
+        await import("./every-page/cursor.js");//every page custom cursor
+        await import("./every-page/btn_disappear.js");//every page script for disappear
+        await import("./every-page/form.js");//every page scripy for contact form
 
         // specific individual modules
     } else if (currentPage === '404') {
         // every page modules
-        import("./every-page/cursor.js");//every page custom cursor
+        await import("./every-page/cursor.js");//every page custom cursor
 
         // specific individual modules
     } else {
